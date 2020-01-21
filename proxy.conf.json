@@ -1,0 +1,11 @@
+{
+    "/api": {
+        "target": "https://awesome-rest-green-roots.herokuapp.com",
+        "secure": false,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/api": "/api/jokes"
+        },
+        "changeOrigin": true
+    }
+}
