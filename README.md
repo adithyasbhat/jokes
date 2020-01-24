@@ -7,4 +7,3 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - npm install
 - npm run start
 
-Testing
