@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  private SERVER_URL = 'https://awesome-rest-green-roots.herokuapp.com/api/jokes';
+  private SERVER_URL = '/api';
 
   constructor( private httpClient: HttpClient ) {}
 
