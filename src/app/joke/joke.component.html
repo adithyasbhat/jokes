@@ -1,1 +1,8 @@
 <h1>Joke</h1>
+<h3>Joke List</h3>
+
+<ul *ngFor="let joke of list">
+    <li> <strong>Joke :</strong> {{joke.content}} </li>
+    <li> <strong>Date: </strong> {{joke.createdAt | date}} </li>
+    <li> <strong>By: </strong> {{joke.name}} </li>
+</ul>

@@ -7,11 +7,20 @@ import { format } from 'date-fns'
   styleUrls: ['./joke.component.css']
 })
 export class JokeComponent implements OnInit {
-  
-  constructor() { }
+
+  public list = [];
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     console.log('initializing joke component');
-    
+    this.getJokeList();
+
   }
+
+  getJokeList() {
+    this.apiService.getJokeList().subscribe(data => {
+      this.list = data['jokes']
+      console.log(this.list);
+  });
+}
 }
