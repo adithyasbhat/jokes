@@ -1,0 +1,8 @@
+<h1 class="btn-center">Random Joke</h1>
+<button mat-raised-button class="btn-center" color="primary" (click)="getRandomJoke()"> Random Joke</button>
+<ul>
+    <li> <strong>Joke :</strong> {{content}} </li>
+    <li> <strong>Date: </strong> {{createdAt | date}} </li>
+    <li> <strong>By: </strong> {{name}} </li>
+    <!-- <button mat-raised-button (click)="jokeDetail()" color="primary">Detail</button> -->
+</ul>
