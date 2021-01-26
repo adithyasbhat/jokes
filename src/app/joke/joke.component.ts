@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { format } from 'date-fns'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-joke',
   templateUrl: './joke.component.html',
@@ -9,7 +10,8 @@ import { format } from 'date-fns'
 export class JokeComponent implements OnInit {
 
   public list = [];
-  constructor(private apiService: ApiService) { }
+  listArray: any;
+  constructor(private apiService: ApiService, private router: Router) { }
 
   ngOnInit() {
     console.log('initializing joke component');
@@ -22,5 +24,20 @@ export class JokeComponent implements OnInit {
       this.list = data['jokes']
       console.log(this.list);
   });
+}
+randomJoke() {
+  this.router.navigate(['jokes/random']);
+  
+}
+
+jokeDetail() {
+// alert('in joke Details()');
+this.apiService.getJokeList().subscribe(data => {
+  this.listArray = data['jokes'];
+  // console.log(this.listArray);
+var rand = this.list[Math.floor(Math.random() * this.listArray.length)];
+alert(this.listArray);
+});
+    this.router.navigate(['jokes/random']);
 }
 }

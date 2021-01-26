@@ -11,13 +11,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { JokeComponent } from './joke/joke.component';
+import { RandomJokeComponent } from './random-joke/random-joke.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    JokeComponent
+    JokeComponent,
+    RandomJokeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,6 @@ import { JokeComponent } from './joke/joke.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [JokeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
